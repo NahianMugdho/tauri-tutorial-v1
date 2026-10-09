@@ -5,6 +5,6 @@ import react from "@vitejs/plugin-react";
 // তাই build এর সময় VITE_BASE=/রিপো-নাম/ দিতে হয় (GitHub Actions workflow এটা নিজে দেয়)।
 // লোকালে dev চালালে "/" ই থাকে।
 export default defineConfig({
-  base: process.env.VITE_BASE || "/",
+  base:  "/tauri-tutorial-v1/",
   plugins: [react()],
 });
