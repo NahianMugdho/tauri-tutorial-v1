@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: "Inter", system-ui, "Noto Sans Bengali", sans-serif; }
+pre code { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; }
+
+/* পাইপলাইনের প্যাকেট অ্যানিমেশন */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.0); }
+  50% { box-shadow: 0 0 22px 4px rgba(56, 189, 248, 0.55); }
+}
+.node-active { animation: pulseGlow 1s ease-in-out infinite; border-color: #38bdf8 !important; }
+.node-done { border-color: #4ade80 !important; }
+.node-err { border-color: #f87171 !important; }
