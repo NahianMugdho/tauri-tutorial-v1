@@ -7,18 +7,22 @@ import Project from "../pages/Project";
 import Lab from "../pages/Lab";
 import NotFound from "../pages/NotFound";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainLayout />,
-    errorElement: <NotFound />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: "projects", element: <Projects /> },
-      { path: "project/:slug", element: <Project /> },
-      { path: "lab", element: <Lab /> },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <MainLayout />,
+      errorElement: <NotFound />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "projects", element: <Projects /> },
+        { path: "project/:slug", element: <Project /> },
+        { path: "lab", element: <Lab /> },
+      ],
+    },
+  ],
+  // basename: সাইট /রিপো-নাম/ এর ভেতরে চললে সব লিংক ঠিক থাকে (Vite এর base থেকে আসে)
+  { basename: import.meta.env.BASE_URL }
+);
 
 export default router;
