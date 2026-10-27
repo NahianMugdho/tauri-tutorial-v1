@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "tauri-tutorial-v1"
+  }
+}
