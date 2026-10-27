@@ -4,6 +4,7 @@ import calcCli from "./calcCli";
 import miniNotes from "./miniNotes";
 import mysqlProject from "./mysqlProject";
 import mongoProject from "./mongoProject";
+import iphoneBattery from "./iphoneBattery";
 
-export const projects = [calcV2, calcCli, miniNotes, mysqlProject, mongoProject];
+export const projects = [calcV2, calcCli, miniNotes, mysqlProject, mongoProject, iphoneBattery];
 export const findProject = (slug) => projects.find((p) => p.slug === slug);
